@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+div {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 20px;
+}
+
+#conteudo {
+  text-align: left;
+}
+
+ol {
+  counter-reset: item;
+  list-style-type: none;
+}
+
+
+li::before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+  font-weight: 700;
+}
